@@ -6,7 +6,7 @@ phases:
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 314146305050.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
-      - docker build -t ijse/ai .
+      - docker build -t ai .
       - docker tag ai:latest 314146305050.dkr.ecr.us-east-1.amazonaws.com/ai:latest
   post_build:
     commands:
